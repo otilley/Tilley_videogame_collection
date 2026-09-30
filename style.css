@@ -10,12 +10,23 @@ h2 {
 }
 body {
     font-family: var(--game-font);
+    margin: 0;
+    padding: 1rem;
 }
 
 #games {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 74rem;
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    #games {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
@@ -24,7 +35,85 @@ body {
 }
 
 .card img {
+    display: block;
     width: 100%;
+    max-width: 35rem;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border: 0.5px solid grey;
+
+}
+
+.card img:hover{
+    filter: saturate(1.5) brightness(1.05);
+    transform: translateY(-5px);
+}
+
+
+.releaseDate {
+    display: block;
+    width: 100%;
+    max-width: 35rem;
+    box-sizing: border-box;
+    margin: 0.5rem 0 1rem;
+    text-align: right;
+    font-size: .8rem;
+    color: rgb(178, 178, 178);
+
+}
+
+.gamePrice {
+    margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 35rem;
+    box-sizing: border-box;
+}
+
+.titleRow .gameTitle,
+.titleRow .gameMeta {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+}
+
+.titleRow .gameTitle {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gameTitle span {
+    display: block;
+    width: max-content;
+    white-space: nowrap;
+}
+
+.gameTitle.scrolling span {
+    animation: title-scroll 3s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes title-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-1 * var(--scroll-distance))); }
+}
+
+
+
+.gameMeta{
+    padding: 0.3rem 0.5rem;
+    border: 1px solid grey;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+
 }
 
 .genres {
@@ -32,12 +121,137 @@ body {
     gap: 0.5rem;
 }
 
+.genres span {
+    display: inline-block;
+    padding: .3rem 0.7rem;
+    border-radius: 100px;
+    background:rgb(238, 255, 177)
+}
+
+.genres span[data-genre="Action"] {
+    background: #ffa245;
+    color: #35205c;
+}
+
+.genres span[data-genre="Adventure"] {
+    background: #fff080;
+    color: #35205c;
+}
+.genres span[data-genre="Beat 'em up"] {
+    background: #8bffa6;
+    color: #35205c;
+}
+.genres span[data-genre="Class-based Shooter"] {
+    background: #8ce4ff;
+    color: #35205c;
+}
+.genres span[data-genre="Co-op"] {
+    background: #9dff7c;
+    color: #35205c;
+}
+.genres span[data-genre="Episodic"] {
+    background: #79ac86;
+    color: #f8f8f8;
+}
+.genres span[data-genre="Farm life sim"] {
+    background: #baff61;
+    color: #35205c;
+}
+.genres span[data-genre="Kart Racing"] {
+    background: #65ffff;
+    color: #35205c;
+}
+.genres span[data-genre="Narrative"] {
+    background: #5d7ab4;
+    color: #f8f8f8;
+}
+.genres span[data-genre="Open World"] {
+    background: #eaa8fb;
+    color: #35205c;
+}
+.genres span[data-genre="Party Game"] {
+    background: #8389ff;
+    color: #ffffff;
+}
+.genres span[data-genre="Platformer"] {
+    background: #ebff57;
+    color: #35205c;
+}
+.genres span[data-genre="Point and click"] {
+    background: #777676;
+    color: #fcfbfd;
+}
+.genres span[data-genre="RPG"] {
+    background: #a682fb;
+    color: #f5f3f7;
+}
+.genres span[data-genre="Sandbox"] {
+    background: #fb92f1;
+    color: #35205c;
+}
+.genres span[data-genre="Survival Horror"] {
+    background: #f83030;
+    color: #fefeff;
+}
+
+
 .selected {
-    background: pink;
+    background: rgb(238, 255, 177);
 }
 
 h1 {
     font-family: var(--game-font);
     font-weight: 600;
     font-size: 3rem; 
+}
+
+.priceFilterControl {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    max-width: 80rem;
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+}
+
+#priceFilter {
+    padding: 0.45rem 0.7rem;
+    border: 2px solid #dbdbdb;
+    border-radius: 0.7rem;
+    background: #f2f2f2;
+    font: inherit;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 80rem;
+    box-sizing: border-box;
+    margin: 0 auto 0rem;
+    padding: 1rem;
+    list-style: none;
+}
+
+.filter {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid #dbdbdb;
+    border-radius: 0.7rem;
+    background: #f2f2f2;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.filter:hover {
+    background: rgb(238, 255, 177);
+    transform: translateY(-2px);
+    border-color: rgb(220, 243, 136);
+}
+
+.filter.selected {
+    background: rgb(233, 255, 111);
 }

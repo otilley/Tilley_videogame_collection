@@ -1,113 +1,13 @@
 const games = [
   {
-    title: "Overwatch",
-    genre: ["Class-Based Shooter"],
-    maturity_rating: "T",
-    player_number: "multi",
-    developer: "Blizzard",
-    release_date: "May 24, 2016",
-    perspective: "1st",
-    path: "assets/overwatch.jpg"
-  },
-    {
-    title: "Cyberpunk 2077",
-    genre: "Action-adventure RPG; Open World ",
-    maturity_rating: "M",
-    player_number: "single",
-    developer: "CD Projekt Red",
-    release_date: "December 9, 2020",
-    perspective: "1st",
-    path: "assets/cyberpunk2077.jpg"
-  },
-   {
-    title: "Red Dead Redemption 2",
-    genre: "Action, Adventure, RPG, Open World ",
-    maturity_rating: "M",
-    player_number: "multi/single",
-    developer: "Rockstar Games",
-    release_date: "October 26, 2018",
-    perspective: "3rd/1st",
-    path: "assets/rdr2.jpg"
-  },
-   {
-    title: "Minecraft",
-    genre: "Sandbox",
+    title: "Among Us",
+    genre: "Party Game",
     maturity_rating: "E10+",
-    player_number: "multi/single",
-    developer: "Mojang Studios",
-    release_date: "November 18, 2011",
-    perspective: "1st/3rd",
-    path: "assets/minecraft.jpg"
-  },
-  {
-    title: "Disco Elysium",
-    genre: "Adventure, RPG, Point and click ",
-    maturity_rating: "M",
-    player_number: "single",
-    developer: "ZA/UM",
-    release_date: "October 15, 2019",
-    perspective: "3rd",
-    path: "assets/discoelysium.jpg"
-  },
-  {
-    title: "Katana Zero",
-    genre: "Platformer",
-    maturity_rating: "M",
-    player_number: "single",
-    developer: "Askiisoft",
-    release_date: "April 18, 2019",
-    perspective: "3rd",
-    path: "assets/katanazero.jpg"
-  },
-  {
-    title: "The Last of Us",
-    genre: "Action, Adventure, Survival Horror ",
-    maturity_rating: "M",
-    player_number: "single",
-    developer: "Naughty Dog",
-    release_date: "June 14, 2013",
-    perspective: "3rd",
-    path: "assets/tlou.jpg"
-  },
-  {
-    title: "The Finals",
-    genre: "Class-based Shooter",
-    maturity_rating: "T",
     player_number: "multi",
-    developer: "Embark Studios",
-    release_date: "December 7, 2023",
-    perspective: "3rd/1st",
-    path: "assets/thefinals.jpg"
-  },
-  {
-    title: "Deep Rock Galactic",
-    genre: "Co-op, Class-based shooter",
-    maturity_rating: "T",
-    player_number: "multi/single",
-    developer: "Ghost Ship Games",
-    release_date: "February 28, 2018",
-    perspective: "1st",
-    path: "assets/drg.jpg"
-  },
-  {
-    title: "Stardew Valley",
-    genre: "Adventure, RPG, Farm life sim",
-    maturity_rating: "E10+",
-    player_number: "multi/single",
-    developer: "ConcernedApe",
-    release_date: "February 26, 2016",
+    developer: "InnerSloth",
+    release_date: "June 15, 2018",
     perspective: "3rd",
-    path: "assets/stardew.jpeg"
-  },
-  {
-    title: "Fallout: New Vegas",
-    genre: "Action, RPG ",
-    maturity_rating: "M",
-    player_number: "single",
-    developer: "Obsidian Entertainment",
-    release_date: "October 19, 2010",
-    perspective: "3rd/1st",
-    path: "assets/fnv.jpeg"
+    path: "assets/amongus.jpg"
   },
   {
     title: "Castle Crashers",
@@ -119,165 +19,25 @@ const games = [
     perspective: "3rd",
     path: "assets/cc.jpg"
   },
-  {
-    title: "Among Us",
-    genre: "Party Game",
-    maturity_rating: "E10+",
-    player_number: "multi",
-    developer: "InnerSloth",
-    release_date: "June 15, 2018",
-    perspective: "3rd",
-    path: "assets/amongus.jpg"
-  },
-  {
-    title: "Life is Strange",
-    genre: "Narrative, Adventure, Episodic,",
+    {
+    title: "Cyberpunk 2077",
+    genre: "Action, Adventure RPG; Open World ",
     maturity_rating: "M",
     player_number: "single",
-    developer: "Don'tNod",
-    release_date: "January 30, 2015",
-    perspective: "3rd",
-    path: "assets/lis.jpg"
-  },
-  {
-    title: "Marvel Rivals",
-    genre: "Class-based Shooter",
-    maturity_rating: "T",
-    player_number: "multi",
-    developer: "NetEase",
-    release_date: "December 6, 2024",
-    perspective: "3rd",
-    path: "assets/rivals.webp"
-  },
-  {
-    title: "The Outlast Trials",
-    genre: "Action, Adventure, Survival Horror ",
-    maturity_rating: "M",
-    player_number: "multi/single",
-    developer: "Red Barrels",
-    release_date: "May 18, 2023",
+    developer: "CD Projekt Red",
+    release_date: "December 9, 2020",
     perspective: "1st",
-    path: "assets/TOT.jpg"
+    path: "assets/cyberpunk2077.jpg"
   },
   {
-    title: "LittleBigPlanet",
-    genre: "Sandbox, Platformer",
-    maturity_rating: "E",
-    player_number: "multi/single",
-    developer: "Media Molecule",
-    release_date: "October 27, 2008",
-    perspective: "3rd",
-    path: "assets/LBP.jpg"
-  },
-  {
-    title: "Pokemon Platinum",
-    genre: "Adventure, RPG",
-    maturity_rating: "E",
-    player_number: "single",
-    developer: "Game Freak",
-    release_date: "September 13, 2008",
-    perspective: "3rd",
-    path: "assets/pokemonp.jpg"
-  },
-  {
-    title: "Mario Kart 8",
-    genre: "Kart Racing, Party Game",
-    maturity_rating: "E",
-    player_number: "multi/single",
-    developer: "Nintendo",
-    release_date: "May 30, 2014",
-    perspective: "3rd",
-    path: "assets/mk8.jpg"
-  },
-  {
-    title: "Super Smash Bros. Brawl",
-    genre: "Platformer, Beat 'em up",
+    title: "Deep Rock Galactic",
+    genre: "Co-op, Class-based Shooter",
     maturity_rating: "T",
     player_number: "multi/single",
-    developer: "Sora Ltd",
-    release_date: "January 30, 2008",
-    perspective: "3rd",
-    path: "assets/ssb.jpg"
-  },
-  {
-    title: "Rayman Origins",
-    genre: "Adventure, Platformer, Beat 'em up",
-    maturity_rating: "E10+",
-    player_number: "multi/single",
-    developer: "Ubisoft",
-    release_date: "November 15, 2011",
-    perspective: "3rd",
-    path: "assets/raymanorigins.jpg"
-  },
-  {
-    title: "Skylanders: Spyro's Adventure",
-    genre: "Action, Adventure, RPG, Platformer, ",
-    maturity_rating: "E10+",
-    player_number: "multi/single",
-    developer: "Toys for Bob",
-    release_date: "October 12, 2011",
-    perspective: "3rd",
-    path: "assets/skylanders.jpg"
-  },
-  {
-    title: "The Case of the Golden Idol",
-    genre: "Adventure, Puzzle, Point and click ",
-    maturity_rating: "T",
-    player_number: "single",
-    developer: "Color Gray Games",
-    release_date: "October 13, 2022",
-    perspective: "3rd",
-    path: "assets/tcotgi.png"
-  },
-  {
-    title: "R.E.P.O.",
-    genre: "Co-op, Survival Horror, ",
-    maturity_rating: "T",
-    player_number: "multi/single",
-    developer: "Semiwork Studios",
-    release_date: "February 26, 2025",
+    developer: "Ghost Ship Games",
+    release_date: "February 28, 2018",
     perspective: "1st",
-    path: "assets/repo.jpg"
-  },
-  {
-    title: "Portal 2",
-    genre: "Action, Adventure, Puzzle, Platformer",
-    maturity_rating: "E10+",
-    player_number: "multi/single",
-    developer: "Valve",
-    release_date: "April 18, 2011",
-    perspective: "1st",
-    path: "assets/portal2.jpg"
-  },
-  {
-    title: "Plants vs. Zombies: Garden Warfare",
-    genre: "Class-based shooter",
-    maturity_rating: "E10+",
-    player_number: "multi",
-    developer: "PopCap Vancouver",
-    release_date: "February 25, 2014",
-    perspective: "3rd",
-    path: "assets/pvzgw.jpg"
-  },
-  {
-    title: "Team Fortress 2",
-    genre: "Class-based shooter",
-    maturity_rating: "M",
-    player_number: "multi",
-    developer: "Valve",
-    release_date: "October 10, 2007",
-    perspective: "1st",
-    path: "assets/tf2.jpg"
-  },
-  {
-    title: "Lego Marvel Superheroes",
-    genre: "Action, Adventure, Open world ",
-    maturity_rating: "E10+",
-    player_number: "multi/single",
-    developer: "Traveller's Tales",
-    release_date: "October 22, 2013",
-    perspective: "3rd/1st",
-    path: "assets/lms.jpg"
+    path: "assets/drg.jpg"
   },
   {
     title: "Detroit: Become Human",
@@ -290,14 +50,264 @@ const games = [
     path: "assets/dbc.jpg"
   },
   {
+    title: "Disco Elysium",
+    genre: "Adventure, RPG, Point and click ",
+    maturity_rating: "M",
+    player_number: "single",
+    developer: "ZA/UM",
+    release_date: "October 15, 2019",
+    perspective: "3rd",
+    path: "assets/discoelysium.jpg"
+  },
+  {
+    title: "Fallout: New Vegas",
+    genre: "Action, RPG ",
+    maturity_rating: "M",
+    player_number: "single",
+    developer: "Obsidian Entertainment",
+    release_date: "October 19, 2010",
+    perspective: "3rd/1st",
+    path: "assets/fnv.jpeg"
+  },
+  {
     title: "Hotline Miami",
-    genre: "Top-down Shooter",
+    genre: "Action, Top-down Shooter",
     maturity_rating: "M",
     player_number: "single",
     developer: "Dennaton Games",
     release_date: "October 23, 2012",
     perspective: "3rd",
     path: "assets/hotlinemiami.png"
+  },
+  {
+    title: "Katana Zero",
+    genre: "Platformer",
+    maturity_rating: "M",
+    player_number: "single",
+    developer: "Askiisoft",
+    release_date: "April 18, 2019",
+    perspective: "3rd",
+    path: "assets/katanazero.jpg"
+  },
+  {
+    title: "Lego Marvel Superheroes",
+    genre: "Action, Adventure, Open World ",
+    maturity_rating: "E10+",
+    player_number: "multi/single",
+    developer: "Traveller's Tales",
+    release_date: "October 22, 2013",
+    perspective: "3rd/1st",
+    path: "assets/lms.jpg"
+  },
+  {
+    title: "Life is Strange",
+    genre: "Narrative, Adventure, Episodic,",
+    maturity_rating: "M",
+    player_number: "single",
+    developer: "Don'tNod",
+    release_date: "January 30, 2015",
+    perspective: "3rd",
+    path: "assets/lis.jpg"
+  },
+  {
+    title: "LittleBigPlanet",
+    genre: "Sandbox, Platformer",
+    maturity_rating: "E",
+    player_number: "multi/single",
+    developer: "Media Molecule",
+    release_date: "October 27, 2008",
+    perspective: "3rd",
+    path: "assets/LBP.jpg"
+  },
+  {
+    title: "Mario Kart 8",
+    genre: "Kart Racing, Party Game",
+    maturity_rating: "E",
+    player_number: "multi/single",
+    developer: "Nintendo",
+    release_date: "May 30, 2014",
+    perspective: "3rd",
+    path: "assets/mk8.jpg"
+  },
+  {
+    title: "Marvel Rivals",
+    genre: "Class-based Shooter",
+    maturity_rating: "T",
+    player_number: "multi",
+    developer: "NetEase",
+    release_date: "December 6, 2024",
+    perspective: "3rd",
+    path: "assets/rivals.webp"
+  },
+   {
+    title: "Minecraft",
+    genre: "Sandbox, Co-op",
+    maturity_rating: "E10+",
+    player_number: "multi/single",
+    developer: "Mojang Studios",
+    release_date: "November 18, 2011",
+    perspective: "1st/3rd",
+    path: "assets/minecraft.jpg"
+  },
+  {
+    title: "Night in the Woods",
+    genre: "Narrative, adventure",
+    maturity_rating: "T",
+    player_number: "single",
+    developer: "Secret Lab",
+    release_date: "February 21, 2017",
+    perspective: "3rd",
+    path: "assets/nitw.jpg"
+  },
+  {
+    title: "Overwatch",
+    genre: ["Class-Based Shooter"],
+    maturity_rating: "T",
+    player_number: "multi",
+    developer: "Blizzard",
+    release_date: "May 24, 2016",
+    perspective: "1st",
+    path: "assets/overwatch.jpg"
+  },
+  {
+    title: "Plants vs. Zombies: Garden Warfare",
+    genre: "Class-based Shooter",
+    maturity_rating: "E10+",
+    player_number: "multi",
+    developer: "PopCap Vancouver",
+    release_date: "February 25, 2014",
+    perspective: "3rd",
+    path: "assets/pvzgw.jpg"
+  },
+  {
+    title: "Pokemon Platinum",
+    genre: "Adventure, RPG",
+    maturity_rating: "E",
+    player_number: "single",
+    developer: "Game Freak",
+    release_date: "September 13, 2008",
+    perspective: "3rd",
+    path: "assets/pokemonp.jpg"
+  },
+  {
+    title: "Portal 2",
+    genre: "Action, Adventure, Puzzle, Platformer",
+    maturity_rating: "E10+",
+    player_number: "multi/single",
+    developer: "Valve",
+    release_date: "April 18, 2011",
+    perspective: "1st",
+    path: "assets/portal2.jpg"
+  },
+  {
+    title: "R.E.P.O.",
+    genre: "Co-op, Survival Horror, ",
+    maturity_rating: "T",
+    player_number: "multi/single",
+    developer: "Semiwork Studios",
+    release_date: "February 26, 2025",
+    perspective: "1st",
+    path: "assets/repo.jpg"
+  },
+  {
+    title: "Rayman Origins",
+    genre: "Adventure, Platformer, Beat 'em up",
+    maturity_rating: "E10+",
+    player_number: "multi/single",
+    developer: "Ubisoft",
+    release_date: "November 15, 2011",
+    perspective: "3rd",
+    path: "assets/raymanorigins.jpg"
+  },
+   {
+    title: "Red Dead Redemption 2",
+    genre: "Action, Adventure, RPG, Open World ",
+    maturity_rating: "M",
+    player_number: "multi/single",
+    developer: "Rockstar Games",
+    release_date: "October 26, 2018",
+    perspective: "3rd/1st",
+    path: "assets/rdr2.jpg"
+  },
+  {
+    title: "Skylanders: Spyro's Adventure",
+    genre: "Action, Adventure, RPG, Platformer, ",
+    maturity_rating: "E10+",
+    player_number: "multi/single",
+    developer: "Toys for Bob",
+    release_date: "October 12, 2011",
+    perspective: "3rd",
+    path: "assets/skylanders.jpg"
+  },
+  {
+    title: "Stardew Valley",
+    genre: "Adventure, RPG, Farm life sim",
+    maturity_rating: "E10+",
+    player_number: "multi/single",
+    developer: "ConcernedApe",
+    release_date: "February 26, 2016",
+    perspective: "3rd",
+    path: "assets/stardew.jpeg"
+  },
+  {
+    title: "Super Smash Bros. Brawl",
+    genre: "Platformer, Beat 'em up",
+    maturity_rating: "T",
+    player_number: "multi/single",
+    developer: "Sora Ltd",
+    release_date: "January 30, 2008",
+    perspective: "3rd",
+    path: "assets/ssb.jpg"
+  },
+  {
+    title: "Team Fortress 2",
+    genre: "Class-based Shooter",
+    maturity_rating: "M",
+    player_number: "multi",
+    developer: "Valve",
+    release_date: "October 10, 2007",
+    perspective: "1st",
+    path: "assets/tf2.jpg"
+  },
+  {
+    title: "The Case of the Golden Idol",
+    genre: "Adventure, Puzzle, Point and click ",
+    maturity_rating: "T",
+    player_number: "single",
+    developer: "Color Gray Games",
+    release_date: "October 13, 2022",
+    perspective: "3rd",
+    path: "assets/tcotgi.png"
+  },
+  {
+    title: "The Finals",
+    genre: "Class-based Shooter",
+    maturity_rating: "T",
+    player_number: "multi",
+    developer: "Embark Studios",
+    release_date: "December 7, 2023",
+    perspective: "3rd/1st",
+    path: "assets/thefinals.jpg"
+  },
+  {
+    title: "The Last of Us",
+    genre: "Action, Adventure, Survival Horror ",
+    maturity_rating: "M",
+    player_number: "single",
+    developer: "Naughty Dog",
+    release_date: "June 14, 2013",
+    perspective: "3rd",
+    path: "assets/tlou.jpg"
+  },
+  {
+    title: "The Outlast Trials",
+    genre: "Action, Adventure, Survival Horror ",
+    maturity_rating: "M",
+    player_number: "multi/single",
+    developer: "Red Barrels",
+    release_date: "May 18, 2023",
+    perspective: "1st",
+    path: "assets/TOT.jpg"
   },
   {
     title: "The Walking Dead",
@@ -319,14 +329,4 @@ const games = [
     perspective: "3rd",
     path: "assets/undertale.jpg"
   },
-  {
-    title: "Night in the Woods",
-    genre: "Narrative, adventure",
-    maturity_rating: "T",
-    player_number: "single",
-    developer: "Secret Lab",
-    release_date: "February 21, 2017",
-    perspective: "3rd",
-    path: "assets/nitw.jpg"
-  }
 ]
