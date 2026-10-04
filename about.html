@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="tabs">
+            <a class="tab active" href="about.html">About</a>
+            <a class="tab" href="index.html">Games</a>
+            <a class="tab" href="Til's-Favs.html">Til's Favs</a>
+            <span class="glider" style="transform: translateX(0%);"></span>
+        </nav>
+    </div>
+
+    <main>
+        <h1>About</h1>
+        <p class="intro">Hi, I’m Tilley! I'm a 4th year graphic design student at the University of Georgia. Video games have always been an interest of mine, and were part of the reason I discovered my passion for design. I built this collection to showcase all of my favorite games I've played and allow users to navigate through them. </p>
+    </main>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const glider = document.querySelector('.glider');
+        const currentFile = window.location.pathname.split('/').pop();
+        const tabIndexByPage = {
+            'about.html': 0,
+            'index.html': 1,
+            "Til's-Favs.html": 2
+        };
+
+        const activeIndex = tabIndexByPage[currentFile] ?? 0;
+
+        tabs.forEach((tab, index) => {
+            const isActive = index === activeIndex;
+            tab.classList.toggle('active', isActive);
+        });
+
+        if (glider) {
+            glider.style.transform = `translateX(${activeIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>

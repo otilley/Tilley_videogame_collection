@@ -12,6 +12,10 @@ const getGenres = (genreValue) => {
 }
 
 
+const tabs = document.querySelectorAll('.tab');
+const glider = document.querySelector('.glider');
+
+
 const getNormalizedGenres = (genreValue) =>
     getGenres(genreValue).map(genre => genre.toLowerCase())
 
@@ -30,25 +34,25 @@ function renderGames(gameList = games) {
                 : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(game.price)
         const coverMarkup = `<img class="gameCover" src="${game.path}" alt="${game.title}" />`
         const linkedCoverMarkup = game.url
-            ? `<a href="${game.url}" target="_blank" rel="noopener noreferrer">${coverMarkup}</a>`
-            : coverMarkup
+            ? `<a class="gameCoverLink" href="${game.url}" target="_blank" rel="noopener noreferrer">${coverMarkup}</a>`
+            : `<div class="gameCoverLink">${coverMarkup}</div>`
         
 
         card.classList.add("card")
+        card.classList.add("card--brighten")
         card.innerHTML = `
         <div class="titleRow">
             <h2 class="gameTitle" title="${game.title}"><span>${game.title}</span></h2>
             <p class="gameMeta">${game.maturity_rating} </p>
         </div>
+        <div class="cardContent">
             <div>${linkedCoverMarkup}</div>
-             
             <p class="releaseDate">${game.release_date}</p>
             <p class="gamePrice">${formattedPrice}</p>
             <div class="gameDetails">
                 <div class="Developer">
                     <p>Developer: ${game.developer}</p>
                 </div>
-               
                 <div class="Players">
                     <p>Players: ${game.player_number}</p>
                 </div>
@@ -57,9 +61,11 @@ function renderGames(gameList = games) {
                 </div>
             </div>
             <div class="genres">${genreMarkup}</div>
+        </div>
         `
 
         gamesSection.appendChild(card)
+        
 
         const title = card.querySelector(".gameTitle")
         const updateTitleScroll = () => {
@@ -82,6 +88,7 @@ function styleFilters(filters, selected) {
         filter.classList.toggle("selected", filterValue === selected)
     })
 }
+
 
 function applyFilters() {
     const priceMatches = {
@@ -114,6 +121,17 @@ function createGenreFilter(genre) {
         applyFilters()
     })
 }
+function moveGlider(index) {
+  glider.style.transform = `translateX(${index * 100}%)`;
+}
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    moveGlider(index);
+  });
+});
 
 fetch("data.json")
     .then(response => response.json())
@@ -130,4 +148,5 @@ fetch("data.json")
             createGenreFilter(filter.getAttribute("data-genre"))
         })
     })
+    
     .catch(error => console.log("error", error))

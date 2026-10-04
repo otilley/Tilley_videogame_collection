@@ -6,12 +6,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>tilley's game collection</h1>
-    <p class="intro"> hi i'm tilley and this is a collection i made for some of my favorite games i've played. sort through by category/price and click on the game cover to see more about it. </p>
+   <div class="container">
+    <nav class="tabs">
+         <a class="tab" href="about.html">About</a>
+         <a class="tab active" href="index.html">Games</a>
+        <a class="tab" href="Til's-Favs.html">Til's Favs</a>
+     <span class="glider" style="transform: translateX(100%);"></span>
+    </nav>
+   </div>
+
+
+    <h1>Til's Game Collection</h1>
+    <p class="intro"> Welcome to my collection of video games! Organize them by genre and price, and click on the game cover to learn more about it. </p>
 
     <ul>
-        
         <li data-genre="Action" class="filter genreFilter">Action</li>
         <li data-genre="Adventure" class="filter genreFilter">Adventure</li>
         <li data-genre="Beat 'em up" class="filter genreFilter">Beat 'em up</li>
@@ -29,9 +39,9 @@
         <li data-genre="Sandbox" class="filter genreFilter">Sandbox</li>
         <li data-genre="Survival Horror" class="filter genreFilter">Survival Horror</li>
         <li data-genre="all" class="filter genreFilter">All</li>
-    
     </ul>
-       <div class="priceFilterControl">
+
+    <div class="priceFilterControl">
         <label for="priceFilter">Filter by price:</label>
         <select id="priceFilter">
             <option value="all">All prices</option>
@@ -41,7 +51,29 @@
             <option value="over30">Over $30</option>
         </select>
     </div>
+
     <section id="games"></section>
     <script src="script.js"></script>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const glider = document.querySelector('.glider');
+        const currentFile = window.location.pathname.split('/').pop();
+        const tabIndexByPage = {
+            'about.html': 0,
+            'index.html': 1,
+            "Til's-Favs.html": 2
+        };
+
+        const activeIndex = tabIndexByPage[currentFile] ?? 1;
+
+        tabs.forEach((tab, index) => {
+            const isActive = index === activeIndex;
+            tab.classList.toggle('active', isActive);
+        });
+
+        if (glider) {
+            glider.style.transform = `translateX(${activeIndex * 100}%)`;
+        }
+    </script>
 </body>
 </html>
