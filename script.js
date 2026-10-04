@@ -43,9 +43,9 @@ function renderGames(gameList = games) {
             : game.price === 0
                 ? "Free"
                 : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(game.price)
-        const coverMarkup = `<img class="gameCover" src="${game.path}" alt="${game.title}" />`
+        const coverMarkup = `<img class="gameCover" src="${game.path}" alt="" />`
         const linkedCoverMarkup = game.url
-            ? `<a class="gameCoverLink" href="${game.url}" target="_blank" rel="noopener noreferrer">${coverMarkup}</a>`
+            ? `<a class="gameCoverLink" href="${game.url}" aria-label="${game.title}" target="_blank" rel="noopener noreferrer">${coverMarkup}</a>`
             : `<div class="gameCoverLink">${coverMarkup}</div>`
         
 
