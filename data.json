@@ -121,7 +121,7 @@
   },
   {
     "title": "Life is Strange",
-    "genre": "Narrative, adventure, Episodic,",
+    "genre": "Narrative, Adventure, Episodic,",
     "maturity_rating": "M",
     "player_number": "Single",
     "developer": "Don'tNod",
@@ -181,7 +181,7 @@
   },
   {
     "title": "Night in the Woods",
-    "genre": "Narrative, adventure",
+    "genre": "Narrative, Adventure",
     "maturity_rating": "T",
     "player_number": "Single",
     "developer": "Secret Lab",
@@ -284,7 +284,7 @@
     "release_date": "October 12, 2011",
     "perspective": "3rd",
     "path": "assets/skylanders.jpg",
-    "url": "https://www.activision.com/games/skylanders/skylanders-spyros-adventure",
+    "url": "https://www.activision.com/games/skylanders/skylanders-spyros-Adventure",
     "price": 69.99
   },
   {

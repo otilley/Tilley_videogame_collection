@@ -19,6 +19,17 @@ const glider = document.querySelector('.glider');
 const getNormalizedGenres = (genreValue) =>
     getGenres(genreValue).map(genre => genre.toLowerCase())
 
+function colorGameDetails(detailsElement, maturityRating) {
+    const ratingColors = {
+        "E": "#2e7d32",
+        "E10+": "#1565c0",
+        "T": "#9a6700",
+        "M": "#9e1e1e"
+    }
+
+    detailsElement.style.color = ratingColors[maturityRating] ?? "inherit"
+}
+
 function renderGames(gameList = games) {
     const gamesSection = document.querySelector("#games")
     gamesSection.innerHTML = ""
@@ -39,7 +50,6 @@ function renderGames(gameList = games) {
         
 
         card.classList.add("card")
-        card.classList.add("card--brighten")
         card.innerHTML = `
         <div class="titleRow">
             <h2 class="gameTitle" title="${game.title}"><span>${game.title}</span></h2>
@@ -51,19 +61,20 @@ function renderGames(gameList = games) {
             <p class="gamePrice">${formattedPrice}</p>
             <div class="gameDetails">
                 <div class="Developer">
-                    <p>Developer: ${game.developer}</p>
+                    <p><span class="detailLabel">Developer</span></p> <p class="detailValue">${game.developer}</p>
                 </div>
                 <div class="Players">
-                    <p>Players: ${game.player_number}</p>
+                    <p><span class="detailLabel">Players</span></p> <p class="detailValue">${game.player_number}</p>
                 </div>
                 <div class="Perspective">
-                    <p>Perspective: ${game.perspective}</p>
+                    <p><span class="detailLabel">Perspective</span></p> <p class="detailValue">${game.perspective}</p>
                 </div>
             </div>
             <div class="genres">${genreMarkup}</div>
         </div>
         `
 
+        colorGameDetails(card.querySelector(".gameDetails"), game.maturity_rating)
         gamesSection.appendChild(card)
         
 
@@ -88,7 +99,6 @@ function styleFilters(filters, selected) {
         filter.classList.toggle("selected", filterValue === selected)
     })
 }
-
 
 function applyFilters() {
     const priceMatches = {

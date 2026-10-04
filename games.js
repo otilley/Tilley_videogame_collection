@@ -151,7 +151,7 @@ const games = [
   },
   {
     title: "Night in the Woods",
-    genre: "Narrative, adventure",
+    genre: "Narrative, Adventure",
     maturity_rating: "T",
     player_number: "Single",
     developer: "Secret Lab",
